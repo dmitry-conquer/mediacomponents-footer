@@ -93,10 +93,18 @@
 
   &__button {
     color: #fff;
+    margin-top: 0 !important;
+
+    @include x-small {
+      align-self: stretch;
+    }
   }
 
   &__social {
+    margin-top: rem(102);
+
     &--mobile {
+      margin-top: 0;
       display: none;
     }
 
@@ -107,6 +115,10 @@
         justify-content: center;
         padding: fluid(18, 24);
       }
+    }
+
+    .stay-tuned__link .fab {
+      font-size: 26px;
     }
   }
 
@@ -175,10 +187,11 @@
   &__locations {
     display: flex;
     column-gap: fluid(20, 47);
+    margin-left: 0 !important;
 
     @include medium {
       max-width: rem(550);
-      margin: 0 auto;
+      margin: 0 auto !important;
       column-gap: 0;
       border-bottom: rem(1) solid var(--divider-color);
     }
@@ -207,6 +220,10 @@
 
     &-title {
       text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-bottom: 0;
     }
     &-address {
     }
@@ -254,9 +271,11 @@
     display: flex;
     flex-direction: column;
     row-gap: rem(16);
+    margin-left: 0 !important;
   }
 
   &__site-nav-item {
+    padding-left: 0 !important;
   }
 
   &__site-nav-link {
@@ -282,6 +301,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(rem(117), 1fr));
     gap: rem(8) rem(30);
+    margin-left: 0 !important;
 
     @include medium {
       grid-template-columns: 1fr;
@@ -304,10 +324,10 @@
 
   &__google {
     color: #fff;
+    display: flex;
 
     @include medium {
       padding: fluid(18, 24);
-      display: flex;
       justify-content: center;
     }
   }
@@ -338,6 +358,7 @@
       line-height: 1.5;
 
       a {
+        text-decoration: none;
         transition: color 0.3s ease;
 
         @include hover {
@@ -348,9 +369,18 @@
   }
 
   &__bottom-right {
-    color: #fff;
-    font-size: rem(12);
-    line-height: 1.5;
+    p {
+      color: #fff;
+      font-size: rem(12);
+      line-height: 1.5;
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: rem(3) rem(7);
+      a {
+        text-decoration: none;
+      }
+    }
+
 
     a {
       transition: color 0.3s ease;
